@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<title>About</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    body, h1, h2, h3, h4, h5, h6 {
+        font-family: "Raleway", sans-serif
+    }
+
+    body, html {
+        height: 100%;
+        line-height: 1.8;
+    }
+
+    /* Full height image header */
+    .bgimg-1 {
+        background-position: center;
+        background-size: cover;
+        background-image: url("http://spencerhornsolutions.com/wp-content/uploads/2015/08/Professional-Woman-At-Conference-Table-e1473090094244.jpeg");
+        min-height: 100%;
+    }
+
+    .w3-bar .w3-button {
+        padding: 16px;
+    }
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+    <div class="w3-bar w3-white w3-card-2" id="myNavbar">
+        <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right"
+           href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i
+                class="fa fa-bars"></i></a>
+        <!-- Right-sided navbar links -->
+        <div class="w3-hide-small">
+            <!--<a href="#home" class="w3-bar-item w3-button w3-right"><img width="20%" src="logo.png"></a>-->
+            <a href="{{ url_for('contact') }}" class="w3-bar-item w3-button w3-right"><i class="fa fa-envelope"></i>
+                CONTACT</a>
+            <a href="{{ url_for('goals') }}" class="w3-bar-item w3-button w3-right"><i class="fa fa-th"></i> GOALS</a>
+            <a href="{{ url_for('team') }}" class="w3-bar-item w3-button w3-right"><i class="fa fa-user"></i> TEAM</a>
+            <a href="{{ url_for('about') }}" class="w3-bar-item w3-button w3-right">ABOUT</a>
+            <a href="{{ url_for('index') }}" class="w3-bar-item w3-button w3-right">HOME</a>
+
+            <a href="#disclaimer" class="w3-bar-item w3-button w3-left"><i class="fa fa-envelope"></i> DISCLAIMER: THIS
+                WEBSITE IS IN DEVELOPMENT</a>
+
+        </div>
+        <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium"
+           onclick="w3_open()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card-2 w3-animate-left w3-hide-medium w3-hide-large"
+     style="display:none" id="mySidebar">
+    <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+    <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+    <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
+    <a href="#goals" onclick="w3_close()" class="w3-bar-item w3-button">GOALS</a>
+    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+</nav>
+
+<!-- About Section -->
+<div class="w3-container" style="padding:128px 16px" id="about">
+    <h3 class="w3-center">ABOUT THE COMPANY</h3>
+    <p class="w3-center w3-large">Intersections Virtual Reality was inspired by the need for diversity in the technology
+        industry. It has been proven that diverse workforces lead to more creative and effective solutions. Currently,
+        20% of tech workers are women, __% are underrepresented minorities, and __% are persons with disabilities.
+        Virtual reality has been proven to reduce unconscious bias by doing ___ and ____. IVR aims to create more
+        diverse workplaces by opening people’s eyes to unconscious bias and discrimination in the workplace and thereby
+        reducing oppression.Our goal is to address all types of unconscious racism, sexism, and other discrimination in
+        the workplace through virtual simulation role-play scenarios. </p>
+</div>
+</div>
+
+<!-- Promo Section "Statistics" -->
+<div class="w3-container w3-row w3-center w3-dark-grey w3-padding-64">
+    <div class="w3-quarter">
+        <span class="w3-xxlarge">14+</span>
+        <br>Partners
+    </div>
+    <div class="w3-quarter">
+        <span class="w3-xxlarge">55+</span>
+        <br>Projects Done
+    </div>
+    <div class="w3-quarter">
+        <span class="w3-xxlarge">89+</span>
+        <br>Happy Clients
+    </div>
+    <div class="w3-quarter">
+        <span class="w3-xxlarge">150+</span>
+        <br>Meetings
+    </div>
+</div>
+
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64">
+    <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+    <div class="w3-xlarge w3-section"></div>
+</footer>
+
+<script>
+
+    // Modal Image Gallery
+    function onClick(element) {
+        document.getElementById("img01").src = element.src;
+        document.getElementById("modal01").style.display = "block";
+        var captionText = document.getElementById("caption");
+        captionText.innerHTML = element.alt;
+    }
+
+
+    // Toggle between showing and hiding the sidebar when clicking the menu icon
+    var mySidebar = document.getElementById("mySidebar");
+
+    function w3_open() {
+        if (mySidebar.style.display === 'block') {
+            mySidebar.style.display = 'none';
+        } else {
+            mySidebar.style.display = 'block';
+        }
+    }
+
+    // Close the sidebar with the close button
+    function w3_close() {
+        mySidebar.style.display = "none";
+    }
+</script>
+<!--
+To use this code on your website, get a free API key from Google.
+Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
+-->
+
+</body>
+</html>
