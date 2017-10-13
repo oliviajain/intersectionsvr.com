@@ -6,6 +6,10 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <style>
     body, h1, h2, h3, h4, h5, h6 {
         font-family: "Raleway", sans-serif
@@ -43,11 +47,10 @@
                 CONTACT</a>
             <a href="{{ url_for('goals') }}" class="w3-bar-item w3-button w3-right"><i class="fa fa-th"></i> GOALS</a>
             <a href="{{ url_for('team') }}" class="w3-bar-item w3-button w3-right"><i class="fa fa-user"></i> TEAM</a>
-            <a href="{{ url_for('about') }}" class="w3-bar-item w3-button w3-right">ABOUT</a>
-            <a href="{{ url_for('index') }}" class="w3-bar-item w3-button w3-right">HOME</a>
+            <a href="{{ url_for('about') }}" class="w3-bar-item w3-button w3-right"><i class="fa fa-bookmark"></i> ABOUT</a>
+            <a href="{{ url_for('index') }}" class="w3-bar-item w3-button w3-right"><i class="fa fa-home"></i> HOME</a>
 
-            <a href="#disclaimer" class="w3-bar-item w3-button w3-left"><i class="fa fa-envelope"></i> DISCLAIMER: THIS
-                WEBSITE IS IN DEVELOPMENT</a>
+            <a href="#disclaimer" class="w3-bar-item w3-button w3-left">{development phase}</a>
 
         </div>
         <!-- Hide right-floated links on small screens and replace them with a menu icon -->
@@ -71,57 +74,77 @@
 
 
 <!-- Team Section -->
-<div class="w3-container" style="padding:128px 16px" id="team">
+<div class="w3-container w3-light-grey" style="padding:128px 16px" id="team">
     <h3 class="w3-center">THE TEAM</h3>
     <div class="w3-row-padding w3-grayscale" style="margin-top:64px">
         <div class="w3-col w3-third w3-margin-bottom">
-            <div class="w3-card-2">
+            <div class="w3-card-2 w3-white">
                 <img src="/w3images/team2.jpg" style="width:100%">
                 <div class="w3-container">
                     <h3>Sarah Johnson</h3>
                     <p class="w3-opacity">CEO & Founder</p>
                     <h10><i>B.A. Cognitive Science, B.A. in Gender & Women’s Studies, Minor in Computer Science 2018</i>
                     </h10>
+                    <br><br>
                     <p>Sarah is passionate about reducing the oppression of women and minorities and is currently
                         conducting research on diversity in Computer Science at Cal for her senior thesis to advance
                         structural change at the University.
                     </p>
                     <p>
-                        <button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button>
+                        <button class="w3-button w3-light-grey w3-block" data-toggle="collapse" data-target="#demo3">
+                            <i class="fa fa-envelope"></i> Contact
+                        </button>
+
+                    <div id="demo3" class="collapse">
+                        sarahmjohnson@berkeley.edu
+                    </div>
                     </p>
                 </div>
             </div>
         </div>
         <div class="w3-col w3-third w3-margin-bottom">
-            <div class="w3-card-2">
+            <div class="w3-card-2  w3-white">
                 <img src="/w3images/team1.jpg" style="width:100%">
                 <div class="w3-container">
                     <h3>Nicole Benun</h3>
                     <p class="w3-opacity">CFO & Founder</p>
                     <h10><i>B.S. Industrial Engineering and Operations Research 2018</i></h10>
-                    <p>Nicole worked on myriad projects with business applications and served on the College of
-                        Engineering admissions committee to develop more objective admissions policies. Nicole feels
-                        strongly about reforming the workplace by educating employees about the effects of subconscious
-                        bias on the company’s success.
+                    <br><br>
+                    <p>Nicole has served on the College of Engineering admissions committee to develop more objective
+                        admissions policies. Nicole to educate
+                        employees about the effects of subconscious bias on the company’s success.
                     </p>
                     <p>
-                        <button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button>
+                        <button class="w3-button w3-light-grey w3-block" data-toggle="collapse" data-target="#demo">
+                            <i class="fa fa-envelope"></i> Contact
+                        </button>
+
+                    <div id="demo" class="collapse">
+                        nicolebenun@berkeley.edu
+                    </div>
                     </p>
                 </div>
             </div>
         </div>
         <div class="w3-col w3-third w3-margin-bottom">
-            <div class="w3-card-2">
+            <div class="w3-card-2  w3-white">
                 <img src="/w3images/team3.jpg" style="width:100%">
                 <div class="w3-container">
                     <h3>Olivia Jain</h3>
                     <p class="w3-opacity">CTO & Founder</p>
-                    <h10><i>B.A. Computer Science and Mathematics 2020</i></h10>
+                    <h10><i>B.A. Computer Science and Mathematics, Minor in African American Studies, 2020</i></h10>
+                    <br><br>
                     <p>Olivia has conducted computational research at Lawrence Berkeley Laboratory in Machine Learning
                         and minority oppression research with the African American Studies Department. She wants to use
                         her technical experience to drive social change. </p>
                     <p>
-                        <button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button>
+                        <button class="w3-button w3-light-grey w3-block" data-toggle="collapse" data-target="#demo2">
+                            <i class="fa fa-envelope"></i> Contact
+                        </button>
+
+                    <div id="demo2" class="collapse">
+                        oliviajain@berkeley.edu
+                    </div>
                     </p>
                 </div>
             </div>
