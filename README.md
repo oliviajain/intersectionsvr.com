@@ -1,2 +1,4 @@
-# intersectionsvr
-This is a website for a VR Startup. View the website here: http://intersectionsvr.pythonanywhere.com/
+This is a website for a VR Startup. 
+<a href="http://intersectionsvr.pythonanywhere.com/">View the website</a>
+
+
