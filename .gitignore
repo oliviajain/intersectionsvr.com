@@ -1,3 +1,4 @@
 .DS_Store
-_pycache
-.idea
+_pycache_/
+.idea/
+*.pyc
