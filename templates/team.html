@@ -20,7 +20,6 @@
         line-height: 1.8;
     }
 
-    /* Full height image header */
     .bgimg-1 {
         background-position: center;
         background-size: cover;
@@ -40,20 +39,17 @@
         <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right"
            href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i
                 class="fa fa-bars"></i></a>
-        <!-- Right-sided navbar links -->
         <div class="w3-hide-small">
-            <!--<a href="#home" class="w3-bar-item w3-button w3-right"><img width="20%" src="logo.png"></a>-->
+            <a href="#home" class="w3-bar-item w3-button w3-left">
+                <img src="{{ url_for('static', filename = 'logo.png') }}" width="100" height="30">
+            </a>
             <a href="{{ url_for('contact') }}" class="w3-bar-item w3-button w3-right"><i class="fa fa-envelope"></i>
                 CONTACT</a>
             <a href="{{ url_for('goals') }}" class="w3-bar-item w3-button w3-right"><i class="fa fa-th"></i> GOALS</a>
             <a href="{{ url_for('team') }}" class="w3-bar-item w3-button w3-right"><i class="fa fa-user"></i> TEAM</a>
             <a href="{{ url_for('about') }}" class="w3-bar-item w3-button w3-right"><i class="fa fa-bookmark"></i> ABOUT</a>
             <a href="{{ url_for('index') }}" class="w3-bar-item w3-button w3-right"><i class="fa fa-home"></i> HOME</a>
-
-            <a href="#disclaimer" class="w3-bar-item w3-button w3-left">{development phase}</a>
-
         </div>
-        <!-- Hide right-floated links on small screens and replace them with a menu icon -->
 
         <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium"
            onclick="w3_open()">
@@ -62,28 +58,17 @@
     </div>
 </div>
 
-<!-- Sidebar on small screens when clicking the menu icon -->
-<nav class="w3-sidebar w3-bar-block w3-black w3-card-2 w3-animate-left w3-hide-medium w3-hide-large"
-     style="display:none" id="mySidebar">
-    <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
-    <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
-    <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
-    <a href="#goals" onclick="w3_close()" class="w3-bar-item w3-button">GOALS</a>
-    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
-</nav>
-
-
 <!-- Team Section -->
 <div class="w3-container w3-light-grey" style="padding:128px 16px" id="team">
     <h3 class="w3-center">THE TEAM</h3>
     <div class="w3-row-padding w3-grayscale" style="margin-top:64px">
         <div class="w3-col w3-third w3-margin-bottom">
             <div class="w3-card-2 w3-white">
-                <img src="/w3images/team2.jpg" style="width:100%">
-                <div class="w3-container">
+                <div class="w3-container w3-center">
+                    <img src="{{ url_for('static', filename = 'sarah.png') }}" width="300">
                     <h3>Sarah Johnson</h3>
                     <p class="w3-opacity">CEO & Founder</p>
-                    <h10><i>B.A. Cognitive Science, B.A. in Gender & Women’s Studies, Minor in Computer Science 2018</i>
+                    <h10><i>B.A. Cognitive Science, B.A. in Gender & Women’s Studies, Minor in CS 2018</i>
                     </h10>
                     <br><br>
                     <p>Sarah is passionate about reducing the oppression of women and minorities and is currently
@@ -94,18 +79,17 @@
                         <button class="w3-button w3-light-grey w3-block" data-toggle="collapse" data-target="#demo3">
                             <i class="fa fa-envelope"></i> Contact
                         </button>
-
-                    <div id="demo3" class="collapse">
-                        sarahmjohnson@berkeley.edu
-                    </div>
+                        <div id="demo3" class="collapse">
+                            sarahmjohnson@berkeley.edu
+                        </div>
                     </p>
                 </div>
             </div>
         </div>
         <div class="w3-col w3-third w3-margin-bottom">
             <div class="w3-card-2  w3-white">
-                <img src="/w3images/team1.jpg" style="width:100%">
-                <div class="w3-container">
+                <div class="w3-container w3-center">
+                    <img src="{{ url_for('static', filename = 'nicole.png') }}" width="300">
                     <h3>Nicole Benun</h3>
                     <p class="w3-opacity">CFO & Founder</p>
                     <h10><i>B.S. Industrial Engineering and Operations Research 2018</i></h10>
@@ -118,25 +102,22 @@
                         <button class="w3-button w3-light-grey w3-block" data-toggle="collapse" data-target="#demo">
                             <i class="fa fa-envelope"></i> Contact
                         </button>
-
-                    <div id="demo" class="collapse">
-                        nicolebenun@berkeley.edu
-                    </div>
+                        <div id="demo" class="collapse">
+                            nicolebenun@berkeley.edu
+                        </div>
                     </p>
                 </div>
             </div>
         </div>
         <div class="w3-col w3-third w3-margin-bottom">
             <div class="w3-card-2  w3-white">
-                <img src="/w3images/team3.jpg" style="width:100%">
-                <div class="w3-container">
+                <div class="w3-container w3-center">
+                    <img src="{{ url_for('static', filename = 'olivia.png') }}" width="300">
                     <h3>Olivia Jain</h3>
                     <p class="w3-opacity">CTO & Founder</p>
-                    <h10><i>B.A. Computer Science and Mathematics, Minor in African American Studies, 2020</i></h10>
+                    <h10><i>B.A. Computer Science, Minor in African American Studies, 2020</i></h10>
                     <br><br>
-                    <p>Olivia has conducted computational research at Lawrence Berkeley Laboratory in Machine Learning
-                        and minority oppression research with the African American Studies Department. She wants to use
-                        her technical experience to drive social change. </p>
+                    <p>Olivia works at Lawrence Berkeley Lab in computational research and with the African American Studies Dept in minority oppression research. She wants to use her technical experience to drive social change. </p>
                     <p>
                         <button class="w3-button w3-light-grey w3-block" data-toggle="collapse" data-target="#demo2">
                             <i class="fa fa-envelope"></i> Contact
@@ -169,7 +150,6 @@
         captionText.innerHTML = element.alt;
     }
 
-
     // Toggle between showing and hiding the sidebar when clicking the menu icon
     var mySidebar = document.getElementById("mySidebar");
 
@@ -186,10 +166,6 @@
         mySidebar.style.display = "none";
     }
 </script>
-<!--
-To use this code on your website, get a free API key from Google.
-Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
--->
 
 </body>
 </html>
